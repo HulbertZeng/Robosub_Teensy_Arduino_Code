@@ -7,9 +7,6 @@
 #define rst 8
 
 TFT LCDScreen = TFT(cs, dc, rst);
-
-float num = 0;
-String number = "";
 char printout[10];
 
 const int R5 = 6;
@@ -25,7 +22,7 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   String batt1 = String(digitalRead(R5));
-  String batt2 = String(digitalRead(R5));
+  String batt2 = String(digitalRead(R6));
 
   LCDScreen.background(0, 0, 0);      // clear screen
   LCDScreen.stroke(0, 255, 0);        // set to green
